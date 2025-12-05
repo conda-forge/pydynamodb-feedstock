@@ -1,6 +1,6 @@
 context:
   name: pydynamodb
-  version: "0.7.6"
+  version: "0.8.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: c5752f00ab8fce26abf1c9451d9b47d222fd4055a5801e1d0cf899618651eb38
+  sha256: 3dc51c598117a0445c53cd1f6251531d920e9488fa4bbeae8929fa4df8650e88
 
 build:
   noarch: python
@@ -31,7 +31,7 @@ requirements:
 tests:
   - python:
       imports:
-      - pydynamodb
+        - pydynamodb
       pip_check: true
       python_version: ${{ python_min }}.*
 
